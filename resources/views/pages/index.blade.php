@@ -7,7 +7,7 @@
         <section class="hero-area-one">
             <div class="hero-slider-one">
                 <div class="single-slider">
-                    <div class="image-layer bg_cover" style="background-image: url('{{ asset('assets/images/slide1.jpg') }}');"></div>
+                    <div class="image-layer bg_cover" style="background-image: url('{{ asset('assets/images/s1.jpg') }}');"></div>
 
                     <div class="container">
                         <div class="row justify-content-center">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="single-slider">
-                    <div class="image-layer bg_cover" style="background-image: url(assets/images/hero/hero_one-slider-2.jpg);"></div>
+                    <div class="image-layer bg_cover" style="background-image: url('{{ asset('assets/images/s2.jpg') }}');"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="single-slider">
-                    <div class="image-layer bg_cover" style="background-image: url(assets/images/hero/hero_one-slider-3.jpg);"></div>
+                    <div class="image-layer bg_cover" style="background-image: url('{{ asset('assets/images/s3.jpg') }}');"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <div class="single-slider">
-                    <div class="image-layer bg_cover" style="background-image: url(assets/images/hero/hero_one-slider-4.jpg);"></div>
+                    <div class="image-layer bg_cover" style="background-image: url('{{ asset('assets/images/s4.jpg') }}');"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
@@ -190,7 +190,7 @@
                     <div class="col-xl-7 col-lg-6">
                         <div class="about-one_image-box p-r mb-50 pl-100">
                             <div class="about-img_one wow fadeInLeft">
-                                <img src="{{ asset('assets/images/175x24.jpg') }}" alt="About Image">
+                                <img src="{{ asset('assets/images/OK.jpg') }}" alt="About Image">
                             </div>
                             <div class="about-img_two wow fadeInRight">
                                 <img src="{{ asset('assets/images/470x625.jpg') }}" alt="About Image">
