@@ -98,7 +98,7 @@
                                         class="{{ Route::current()->getName() == 'services' ? 'active' : '' }}">Nos
                                         Services</a>
                                 </li>
-                                <li class="menu-item has-children"><a href="{{ route('portfolio') }}"
+                                <li class="menu-item"><a href="{{ route('portfolio') }}"
                                         class="{{ Route::current()->getName() == 'portfolio' ? 'active' : '' }}">Nos
                                         Réalisations</a>
                                 </li>

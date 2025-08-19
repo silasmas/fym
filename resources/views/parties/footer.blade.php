@@ -90,14 +90,14 @@
                 <h4 class="widget-title">Actualités récentes</h4>
                 <ul class="post-widget-wrap">
                     <li class="post-item">
-                        <img src="assets/images/widget/news-1.jpg" alt="Image de l’article">
+                        <img src="{{ asset('assets/images/85X85B.jpg') }}" alt="Image de l’article">
                         <div class="post-title-date">
                             <h3 class="title"><a href="blog-details.html">Concevoir de meilleurs liens pour sites web et e-mails</a></h3>
                             <span class="posted-on"><i class="fas fa-calendar-alt"></i><a href="#">25 mars 2022</a></span>
                         </div>
                     </li>
                     <li class="post-item">
-                        <img src="assets/images/widget/news-2.jpg" alt="Image de l’article">
+                        <img src="{{ asset('assets/images/85X85A.jpg') }}" alt="Image de l’article">
                         <div class="post-title-date">
                             <h3 class="title"><a href="blog-details.html">Calendriers de l’avent pour les designers web</a></h3>
                             <span class="posted-on"><i class="fas fa-calendar-alt"></i><a href="#">25 mars 2022</a></span>

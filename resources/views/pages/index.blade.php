@@ -7,7 +7,8 @@
         <section class="hero-area-one">
             <div class="hero-slider-one">
                 <div class="single-slider">
-                    <div class="image-layer bg_cover" style="background-image: url(assets/images/hero/hero_one-slider-1.jpg);"></div>
+                    <div class="image-layer bg_cover" style="background-image: url('{{ asset('assets/images/slide1.jpg') }}');"></div>
+
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
@@ -159,27 +160,27 @@
                                     <div class="tab-pane fade show active" id="mission">
                                         <div class="content-box-gap">
                                             <p>Natus error sit voluptatem accusantium doloremque laudatium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt</p>
-                                            <div class="avatar-box d-flex align-items-center">
+                                            {{-- <div class="avatar-box d-flex align-items-center">
                                                 <div class="thumb">
                                                     <img src="assets/images/user-1.jpg" alt="Admin Thumb">
                                                 </div>
                                                 <div class="content">
                                                     <img src="assets/images/sign-1.png" alt="Sign">
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="vision">
                                         <div class="content-box-gap">
                                             <p>Natus error sit voluptatem accusantium doloremque laudatium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt</p>
-                                            <div class="avatar-box d-flex align-items-center">
+                                            {{-- <div class="avatar-box d-flex align-items-center">
                                                 <div class="thumb">
                                                     <img src="assets/images/user-1.jpg" alt="Admin Thumb">
                                                 </div>
                                                 <div class="content">
                                                     <img src="assets/images/sign-1.png" alt="Sign">
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -189,10 +190,10 @@
                     <div class="col-xl-7 col-lg-6">
                         <div class="about-one_image-box p-r mb-50 pl-100">
                             <div class="about-img_one wow fadeInLeft">
-                                <img src="assets/images/about/img-1.jpg" alt="About Image">
+                                <img src="{{ asset('assets/images/175x24.jpg') }}" alt="About Image">
                             </div>
                             <div class="about-img_two wow fadeInRight">
-                                <img src="assets/images/about/img-2.jpg" alt="About Image">
+                                <img src="{{ asset('assets/images/470x625.jpg') }}" alt="About Image">
                             </div>
                         </div>
                     </div>
@@ -284,7 +285,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="play-one_content-box bg_cover wow fadeInDown" style="background-image: url(assets/images/bg/intro-bg-1.jpg);">
+                        <div class="play-one_content-box bg_cover wow fadeInDown" style="background-image: url(assets/images/1117x435.jpg);">
                             <a href="https://www.youtube.com/watch?v=gOZ26jO6iXE" class="video-popup"><i class="fas fa-play"></i></a>
                         </div>
                     </div>
@@ -309,7 +310,7 @@
                 <div class="projects-slider-one">
                     <div class="project-item wow fadeInUp">
                         <div class="img-holder">
-                            <img src="assets/images/portfolio/img-1.jpg" alt="Gallery Image">
+                            <img src="{{ asset('assets/images/300x375A.jpg') }}" alt="Gallery Image">
                             <div class="hover-portfolio">
                                 <div class="hover-content">
                                     <h3 class="title"><a href="portfolio-details.html">Golder Wheat</a></h3>
@@ -320,7 +321,7 @@
                     </div>
                     <div class="project-item wow fadeInDown">
                         <div class="img-holder">
-                            <img src="assets/images/portfolio/img-2.jpg" alt="Gallery Image">
+                            <img src="{{ asset('assets/images/300x375B.jpg') }}" alt="Gallery Image">
                             <div class="hover-portfolio">
                                 <div class="hover-content">
                                     <h3 class="title"><a href="portfolio-details.html">Golder Wheat</a></h3>
@@ -331,7 +332,7 @@
                     </div>
                     <div class="project-item wow fadeInUp">
                         <div class="img-holder">
-                            <img src="assets/images/portfolio/img-3.jpg" alt="Gallery Image">
+                            <img src="{{ asset('assets/images/300x375C.jpg') }}" alt="Gallery Image">
                             <div class="hover-portfolio">
                                 <div class="hover-content">
                                     <h3 class="title"><a href="portfolio-details.html">Golder Wheat</a></h3>
@@ -342,7 +343,7 @@
                     </div>
                     <div class="project-item wow fadeInDown">
                         <div class="img-holder">
-                            <img src="assets/images/portfolio/img-2.jpg" alt="Gallery Image">
+                            <img src="{{ asset('assets/images/300x375D.jpg') }}" alt="Gallery Image">
                             <div class="hover-portfolio">
                                 <div class="hover-content">
                                     <h3 class="title"><a href="portfolio-details.html">Golder Wheat</a></h3>
@@ -353,7 +354,7 @@
                     </div>
                     <div class="project-item wow fadeInUp">
                         <div class="img-holder">
-                            <img src="assets/images/portfolio/img-3.jpg" alt="Gallery Image">
+                            <img src="{{ asset('assets/images/300x375.jpg') }}" alt="Gallery Image">
                             <div class="hover-portfolio">
                                 <div class="hover-content">
                                     <h3 class="title"><a href="portfolio-details.html">Golder Wheat</a></h3>
@@ -455,7 +456,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="img-holder mb-50 wow fadeInDown">
-                            <img src="assets/images/service/img-1.jpg" alt="Service Image">
+                            <img src="{{ asset('assets/images/360x495.jpg') }}" alt="Service Image">
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -496,7 +497,7 @@
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <div class="offer-one_image-box bg_cover mb-50 wow fadeInRight" style="background-image: url(assets/images/bg/offer-bg-1.jpg);">
+                        <div class="offer-one_image-box bg_cover mb-50 wow fadeInRight" style="background-image: url('{{ asset('assets/images/B.jpg') }}');">
                             <div class="content-box">
                                 <h2>35 Years Of
                                     Experience in
@@ -665,7 +666,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="contact-one_information-box bg_cover wow fadeInRight" style="background-image: url(assets/images/bg/contact-bg-1.jpg);">
+                        <div class="contact-one_information-box bg_cover wow fadeInRight" style="background-image: url(assets/images/890X792.jpg);">
                             <div class="information-box">
                                 <h3>Contact Us</h3>
                                 <p>Sit volupta accusantium doloreues laudatiuec totam rem aperiam eaque abillo inventore verit atiset</p>
@@ -724,7 +725,7 @@
                     <div class="col-lg-12">
                         <div class="blog-post-item-one mb-30 wow fadeInLeft">
                             <div class="post-thumbnail">
-                                <img src="assets/images/blog/img-1.jpg" alt="Post Image">
+                                <img src="{{ asset('assets/images/585X220A.jpg') }}" alt="Post Image">
                             </div>
                             <div class="entry-content">
                                 <a href="#" class="cat-btn">Organic Foods</a>
@@ -740,7 +741,7 @@
                         </div>
                         <div class="blog-post-item-one mb-30 wow fadeInRight">
                             <div class="post-thumbnail">
-                                <img src="assets/images/blog/img-2.jpg" alt="Post Image">
+                                <img src="{{ asset('assets/images/585X220B.jpg') }}" alt="Post Image">
                             </div>
                             <div class="entry-content">
                                 <a href="#" class="cat-btn">Organic Foods</a>
@@ -755,7 +756,7 @@
                         </div>
                         <div class="blog-post-item-one mb-30 wow fadeInLeft">
                             <div class="post-thumbnail">
-                                <img src="assets/images/blog/img-3.jpg" alt="Post Image">
+                                <img src="{{ asset('assets/images/585X220C.jpg') }}" alt="Post Image">
                             </div>
                             <div class="entry-content">
                                 <a href="#" class="cat-btn">Organic Foods</a>
