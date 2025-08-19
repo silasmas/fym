@@ -332,7 +332,7 @@
                     </div>
                     <div class="project-item wow fadeInUp">
                         <div class="img-holder">
-                            <img src="{{ asset('assets/images/300x375C.jpg') }}" alt="Gallery Image">
+                            <img src="{{ asset('assets/images/300X375C.jpg') }}" alt="Gallery Image">
                             <div class="hover-portfolio">
                                 <div class="hover-content">
                                     <h3 class="title"><a href="portfolio-details.html">Golder Wheat</a></h3>
