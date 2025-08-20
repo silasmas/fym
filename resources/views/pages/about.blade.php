@@ -39,8 +39,8 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="about-four_image-box text-right p-r mb-50 wow fadeInRight">
-                            <img src="assets/images/about/4.jpg" class="about-img_one" alt="">
-                            <img src="assets/images/about/5.jpg" class="about-img_two" alt="">
+                            <img src="{{ asset('assets/images/440x460.jpg') }}" class="about-img_one" alt="">
+                            <img src="{{ asset('assets/images/366x276.jpg') }}" class="about-img_two" alt="">
                         </div>
                     </div>
                 </div>
