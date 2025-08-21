@@ -1,5 +1,5 @@
   <!--====== Start Page-Banner Section ======-->
-        <section class="page-banner bg_cover position-relative z-1" style="background-image: url('{{ asset('assets/images/1916x520.jpg') }}');">
+        <section class="page-banner bg_cover position-relative z-1" style="background-image: url('{{ asset('assets/images/1916x520s.jpg') }}');">
             <div class="brand-card text-center">
                 <img src="{{ asset('assets/images/ll.png') }}" alt="FYM" width="150" height="150">
                 <h3 style="color: #fff">FYM</h3>

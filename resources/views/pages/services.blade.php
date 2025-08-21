@@ -97,7 +97,7 @@
         <!--====== Start Skill Section ======-->
         <section class="skill-section-two pt-lg-130">
             <div class="container-fluid">
-                <div class="skill-wrapper-one pb-90 bg_cover" style="background-image: url(assets/images/bg/skill-bg-2.jpg);">
+                <div class="skill-wrapper-one pb-90 bg_cover" style="background-image: url(assets/images/1780x792.jpg);">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-7">
@@ -176,7 +176,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="img-holder mb-50 wow fadeInDown">
-                            <img src="assets/images/service/img-1.jpg" alt="Service Image">
+                            <img src="{{ asset('assets/images/360x495s.jpg') }}" alt="Service Image">
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -278,7 +278,7 @@
                 <div class="projects-slider-two">
                     <div class="project-item-two wow fadeInUp">
                         <div class="img-holder">
-                            <img src="assets/images/portfolio/img-25.jpg" alt="">
+                            <img src="{{ asset('assets/images/573x475.jpg') }}" alt="">
                             <div class="hover-portfolio">
                                 <div class="hover-content">
                                     <a href="portfolio-details.html" class="icon-btn"><i class="far fa-arrow-right"></i></a>
@@ -290,7 +290,7 @@
                     </div>
                     <div class="project-item-two wow fadeOutDown">
                         <div class="img-holder">
-                            <img src="assets/images/portfolio/img-26.jpg" alt="">
+                            <img src="{{ asset('assets/images/573x475B.jpg') }}" alt="">
                             <div class="hover-portfolio">
                                 <div class="hover-content">
                                     <a href="portfolio-details.html" class="icon-btn"><i class="far fa-arrow-right"></i></a>
@@ -302,7 +302,7 @@
                     </div>
                     <div class="project-item-two wow fadeInUp">
                         <div class="img-holder">
-                            <img src="assets/images/portfolio/img-27.jpg" alt="">
+                            <img src="{{ asset('assets/images/573x475C.jpg') }}" alt="">
                             <div class="hover-portfolio">
                                 <div class="hover-content">
                                     <a href="portfolio-details.html" class="icon-btn"><i class="far fa-arrow-right"></i></a>
