@@ -28,9 +28,5 @@ class AdminSeeder extends Seeder
         'email_verified_at' => now(),
       ]
     );
-
-    if (! $admin->hasRole('super_admin')) {
-      $admin->assignRole('super_admin');
-    }
   }
 }
