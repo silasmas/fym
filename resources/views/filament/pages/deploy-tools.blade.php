@@ -37,8 +37,9 @@
   @endif
 
   <div class="mt-8 rounded-lg border border-gray-200 dark:border-gray-700 p-4 text-sm">
-    <h4 class="font-semibold mb-2">Initialisation distante (production)</h4>
-    <p class="mb-2">Envoyez une requête POST vers <code>{{ url('/deploy/init') }}</code> avec votre <code>DEPLOY_SECRET</code> :</p>
+    <h4 class="font-semibold mb-2">Assistant d'installation (première mise en ligne)</h4>
+    <p class="mb-2">Avant la première installation, visitez <code>{{ url('/install') }}</code> : le site redirige automatiquement vers cette page tant qu'il n'est pas lancé.</p>
+    <p class="text-gray-500">L'API distante reste disponible pour les scripts :</p>
     <pre class="overflow-x-auto rounded bg-gray-100 dark:bg-gray-900 p-3 text-xs">curl -X POST {{ url('/deploy/init') }} \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \

@@ -11,6 +11,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->prepend(\App\Http\Middleware\ConfigureForInstallation::class);
+
+        $middleware->alias([
+            'installed' => \App\Http\Middleware\EnsureInstalled::class,
+            'not.installed' => \App\Http\Middleware\RedirectIfInstalled::class,
+        ]);
+
         $middleware->validateCsrfTokens(except: [
             'deploy/init',
         ]);

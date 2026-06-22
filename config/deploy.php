@@ -7,7 +7,7 @@ return [
   | Secret de déploiement distant
   |--------------------------------------------------------------------------
   |
-  | Clé requise pour initialiser l'application via POST /deploy/init.
+  | Clé requise pour l'assistant d'installation (/install) et POST /deploy/init.
   | Générez une valeur longue et aléatoire en production.
   |
   */
