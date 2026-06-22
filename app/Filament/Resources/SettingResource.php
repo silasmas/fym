@@ -3,62 +3,92 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\SettingResource\Pages;
-use App\Filament\Resources\SettingResource\RelationManagers;
 use App\Models\Setting;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
+/**
+ * Ressource Filament pour gérer les paramètres globaux du site.
+ */
 class SettingResource extends Resource
 {
-    protected static ?string $model = Setting::class;
+  protected static ?string $model = Setting::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+  protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 
-    public static function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                //
-            ]);
-    }
+  protected static ?string $navigationGroup = 'Système';
 
-    public static function table(Table $table): Table
-    {
-        return $table
-            ->columns([
-                //
-            ])
-            ->filters([
-                //
-            ])
-            ->actions([
-                Tables\Actions\EditAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
-            ]);
-    }
+  protected static ?int $navigationSort = 2;
 
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
+  protected static ?string $modelLabel = 'Paramètre';
 
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListSettings::route('/'),
-            'create' => Pages\CreateSetting::route('/create'),
-            'edit' => Pages\EditSetting::route('/{record}/edit'),
-        ];
-    }
+  protected static ?string $pluralModelLabel = 'Paramètres';
+
+  /**
+   * @param Form $form Instance du formulaire Filament
+   * @return Form Formulaire configuré
+   */
+  public static function form(Form $form): Form
+  {
+    return $form
+      ->schema([
+        Forms\Components\TextInput::make('key')
+          ->label('Clé')
+          ->required()
+          ->maxLength(255)
+          ->unique(ignoreRecord: true)
+          ->placeholder('contact_email'),
+        Forms\Components\Textarea::make('value')
+          ->label('Valeur')
+          ->rows(4)
+          ->columnSpanFull(),
+      ]);
+  }
+
+  /**
+   * @param Table $table Instance du tableau Filament
+   * @return Table Tableau configuré
+   */
+  public static function table(Table $table): Table
+  {
+    return $table
+      ->columns([
+        Tables\Columns\TextColumn::make('key')
+          ->label('Clé')
+          ->searchable()
+          ->sortable(),
+        Tables\Columns\TextColumn::make('value')
+          ->label('Valeur')
+          ->limit(80)
+          ->wrap(),
+        Tables\Columns\TextColumn::make('updated_at')
+          ->label('Modifié le')
+          ->dateTime()
+          ->sortable(),
+      ])
+      ->actions([
+        Tables\Actions\EditAction::make(),
+        Tables\Actions\DeleteAction::make(),
+      ])
+      ->bulkActions([
+        Tables\Actions\BulkActionGroup::make([
+          Tables\Actions\DeleteBulkAction::make(),
+        ]),
+      ]);
+  }
+
+  /**
+   * @return array<string, class-string>
+   */
+  public static function getPages(): array
+  {
+    return [
+      'index' => Pages\ListSettings::route('/'),
+      'create' => Pages\CreateSetting::route('/create'),
+      'edit' => Pages\EditSetting::route('/{record}/edit'),
+    ];
+  }
 }

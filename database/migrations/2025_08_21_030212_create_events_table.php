@@ -41,6 +41,7 @@ Schema::create('event_registrations', function (Blueprint $table) {
      */
     public function down(): void
     {
+        Schema::dropIfExists('event_registrations');
         Schema::dropIfExists('events');
     }
 };

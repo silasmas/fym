@@ -5,7 +5,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-12 col-md-12 col-6">
                     <div class="top-bar-left d-flex align-items-center">
-                        <span class="text">Welcome to Agriculture & Organic Food Template</span>
+                        <span class="text">Bienvenue sur le site de la Fondation Yves Milan</span>
                         {{-- <span class="lang-dropdown">
                                     <select class="wide">
                                         <option value="01">English</option>
@@ -16,14 +16,8 @@
                 </div>
                 <div class="col-xl-6 col-lg-12 col-md-12 col-6">
                     <div class="top-bar-right">
-                        <span class="text"><i class="far fa-clock"></i>Opening Hours : Sunday- Friday, 08:00 am -
-                            05:00pm</span>
-                        <ul class="social-link">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                        </ul>
+                        <span class="text"><i class="far fa-clock"></i>{{ $settings['opening_hours'] ?? 'Lundi - Vendredi, 08h00 - 17h00' }}</span>
+                        @include('parties.social-links')
                     </div>
                 </div>
             </div>
@@ -34,7 +28,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-4 d-xl-block d-lg-none">
                     <div class="site-branding d-lg-block d-none">
-                        <a href="index.html" class="brand-logo">
+                        <a href="{{ route('home') }}" class="brand-logo">
                             <img src="{{ asset('assets/images/logo.jpeg') }}" alt="Site Logo" height="80"
                                 width="179">
                         </a>
@@ -47,8 +41,8 @@
                                 <i class="flaticon-placeholder"></i>
                             </div>
                             <div class="info">
-                                <h5 class="mb-1">Locations</h5>
-                                <p>55 Main Street, New York</p>
+                                <h5 class="mb-1">Adresse</h5>
+                                <p>{{ $settings['contact_address'] ?? 'Kinshasa, RDC' }}</p>
                             </div>
                         </div>
                         <div class="information-item_one d-flex">
@@ -56,8 +50,8 @@
                                 <i class="flaticon-email"></i>
                             </div>
                             <div class="info">
-                                <h5 class="mb-1">Email Us</h5>
-                                <p><a href="mailto:hotlineinfo@gmial.com">hotlineinfo@gmial.com</a></p>
+                                <h5 class="mb-1">E-mail</h5>
+                                <p><a href="mailto:{{ $settings['contact_email'] ?? 'silasjmas@gmail.com' }}">{{ $settings['contact_email'] ?? 'silasjmas@gmail.com' }}</a></p>
                             </div>
                         </div>
                         <div class="button text-md-right text-sm-center">
@@ -80,7 +74,7 @@
                     <div class="nav-menu">
                         <!--=== Mobile Logo ===-->
                         <div class="mobile-logo mb-30 d-block d-xl-none text-center">
-                            <a href="#" class="brand-logo"><img src="{{ asset('assets/images/logo.jpeg') }}"
+                            <a href="{{ route('home') }}" class="brand-logo"><img src="{{ asset('assets/images/logo.jpeg') }}"
                                     height="100" width="200" alt="FYM"></a>
                         </div>
                         <!--=== Main Menu ===-->
@@ -99,8 +93,14 @@
                                         Services</a>
                                 </li>
                                 <li class="menu-item"><a href="{{ route('portfolio') }}"
-                                        class="{{ Route::current()->getName() == 'portfolio' ? 'active' : '' }}">Nos
+                                        class="{{ Route::currentRouteNamed('portfolio*') ? 'active' : '' }}">Nos
                                         Réalisations</a>
+                                </li>
+                                <li class="menu-item"><a href="{{ route('events.index') }}"
+                                        class="{{ Route::currentRouteNamed('events.*') ? 'active' : '' }}">Événements</a>
+                                </li>
+                                <li class="menu-item"><a href="{{ route('posts.index') }}"
+                                        class="{{ Route::currentRouteNamed('posts.*') ? 'active' : '' }}">Actualités</a>
                                 </li>
                             </ul>
                         </nav>
